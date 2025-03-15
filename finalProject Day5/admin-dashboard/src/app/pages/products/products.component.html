@@ -1,0 +1,58 @@
+<div class="mt-5 container p-3">
+  <h2 class="text-center text-muted mb-3">Our Products</h2>
+  <div class="d-flex justify-content-between mt-5">
+    <button
+      class="btn btn-outline-primary"
+      [routerLink]="['/products', 0, 'edit']"
+    >
+      Add new Product
+    </button>
+
+    <input
+      (input)="searchProducts($event)"
+      class="form-control w-25"
+      type="text"
+      name=""
+      id=""
+      placeholder="Search..."
+    />
+  </div>
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col" class="fs-4">Id</th>
+        <th scope="col" class="fs-4">Product Name</th>
+        <th scope="col" class="fs-4">Product Price</th>
+        <th scope="col" class="fs-4">Product Quantity</th>
+        <th scope="col" class="fs-4">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of filterProducts; track product.id) {
+      <tr>
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <a [routerLink]="['/products', product.id, 'edit']">
+            <i class="fs-5 mx-1 text-info bi bi-pencil-square"></i>
+          </a>
+
+          <a [routerLink]="['/products', product.id]">
+            <i class="fs-5 mx-1 text-warning bi bi-eye-fill"></i>
+          </a>
+
+          <a
+            href="#"
+            (click)="deletProductHandler(product.id); $event.preventDefault()"
+          >
+            <i class="fs-5 mx-1 text-danger bi bi-trash"></i>
+          </a>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

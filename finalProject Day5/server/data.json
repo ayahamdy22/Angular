@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Aya"
+    },
+    {
+      "id": "2",
+      "name": "Hamdy"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "watch from serve",
+      "price": 300,
+      "quantity": 2
+    },
+    {
+      "id": "2",
+      "name": "phone from serve",
+      "price": 300,
+      "quantity": 2
+    },
+    {
+      "id": "3",
+      "name": "pen from serve",
+      "price": 400,
+      "quantity": 3
+    },
+    {
+      "name": "dress edit",
+      "price": "400",
+      "quantity": "5",
+      "id": "4"
+    },
+    {
+      "id": "18bf",
+      "name": "laptop",
+      "price": "30000",
+      "quantity": "20"
+    }
+  ],
+  "students": []
+}
