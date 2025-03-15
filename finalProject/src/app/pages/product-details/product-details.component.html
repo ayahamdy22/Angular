@@ -1,0 +1,11 @@
+<div class="bg-dark mt-5 p-5 container rounded text-light">
+  <h1 class="text-warning text-md-center">Product Details {{ productId }}</h1>
+
+  <p class="lead fs-3 mt-3">Product Name: Dummy</p>
+  <p class="lead fs-3 mt-3">Product Price: {{ 200 | currency }}</p>
+  <p class="lead fs-3 mt-3">Product Quantity: 3</p>
+
+  <button class="btn btn-warning mt-3" [routerLink]="['/products']">
+    Back To Product
+  </button>
+</div>

@@ -1,0 +1,40 @@
+<h2 class="mb-4">Sign Up</h2>
+<form>
+  <div class="mb-3">
+    <label for="yourName" class="form-label mx-2 fs-5">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="yourName"
+      aria-describedby="emailHelp"
+      placeholder="Enter User Name"
+    />
+    <!-- <div id="emailHelp" class="form-text text-danger">
+      We'll never share your email with anyone else.
+    </div> -->
+  </div>
+
+  <div class="mb-3">
+    <label for="yourEmail" class="form-label mx-2 fs-5">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="yourEmail"
+      placeholder="Enter Your Price"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="yourPassword" class="form-label mx-2 fs-5">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="yourPassword"
+      placeholder="Enter Your quantity"
+    />
+  </div>
+  <p class="mt-3 fs-5 lead">
+    Already Have An Account? <a [routerLink]="['/account/login']">Login</a>
+  </p>
+  <button type="submit" class="btn btn-dark mt-3 w-100">Sign Up</button>
+</form>
